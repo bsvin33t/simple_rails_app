@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+
+development:
+  <<: *default
+  database: simple_rails_app_development
+  password: password
+
+
+test: &test
+  <<: *default
+  database: simple_rails_app_test
+  min_messages: warning
+  password: password
+
+production:
+  <<: *default
+  database: simple_rails_app_production
+  password: password
